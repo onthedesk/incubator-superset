@@ -117,6 +117,16 @@ trillions of events and petabytes of data. Druid is best used to
 power analytic dashboards and applications.*
 
 
+Development with Docker
+----------------------------
+You can setup your own development environment by follow steps:
+
+* clone this repo
+* copy ./contrib/docker/* to ./
+* bash docker-build.sh #if you work under GFW should open your vpn client
+* docker-compose up -d superset
+* docker-compose exec superset /bin/bash docker-init.sh
+
 Installation & Configuration
 ----------------------------
 
@@ -185,3 +195,4 @@ the world know they are using Superset. Join our growing community!
  - [Yahoo!](https://yahoo.com/)
  - [Zaihang](http://www.zaih.com/)
  - [Zalando](https://www.zalando.com)
+ - [有恒科技](http://www.youheng.com.cn)

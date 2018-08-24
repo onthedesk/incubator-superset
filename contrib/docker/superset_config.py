@@ -20,22 +20,11 @@ def get_env_variable(var_name, default=None):
             raise EnvironmentError(error_msg)
 
 
-POSTGRES_USER = get_env_variable('POSTGRES_USER')
-POSTGRES_PASSWORD = get_env_variable('POSTGRES_PASSWORD')
-POSTGRES_HOST = get_env_variable('POSTGRES_HOST')
-POSTGRES_PORT = get_env_variable('POSTGRES_PORT')
-POSTGRES_DB = get_env_variable('POSTGRES_DB')
-
-# The SQLAlchemy connection string.
-SQLALCHEMY_DATABASE_URI = 'postgresql://%s:%s@%s:%s/%s' % (POSTGRES_USER,
-                                                           POSTGRES_PASSWORD,
-                                                           POSTGRES_HOST,
-                                                           POSTGRES_PORT,
-                                                           POSTGRES_DB)
-
 REDIS_HOST = get_env_variable('REDIS_HOST')
 REDIS_PORT = get_env_variable('REDIS_PORT')
 
+SQLALCHEMY_DATABASE_URI = 'mysql://superset:superset@mysql:3306/superset'
+SQLALCHEMY_TRACK_MODIFICATIONS = True
 
 class CeleryConfig(object):
     BROKER_URL = 'redis://%s:%s/0' % (REDIS_HOST, REDIS_PORT)

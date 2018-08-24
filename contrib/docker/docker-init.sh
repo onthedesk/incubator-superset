@@ -15,7 +15,7 @@ superset load_examples
 superset init
 
 # Need to run `npm run build` when enter contains for first time
-cd superset/assets && npm run build && cd ../../
+cd superset/assets && npm run dev && cd ../../
 
 # Start superset worker for SQL Lab
 superset worker &
